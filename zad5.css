@@ -1,0 +1,154 @@
+body {
+    margin: 0;
+    box-sizing: border-box;
+}
+.main {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+}
+
+.container-top {
+   display: flex;
+   background-color: rgb(77, 77, 243);
+   width: 100%;
+   height: 10%;
+   opacity: 0.8;
+}
+ 
+.container-left {
+    display: flex;
+    background-color: rgb(26, 26, 150);
+    width: 20%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    opacity: 0.8;
+}
+
+.container-big {
+    display: flex;
+    position: absolute;
+    background-color:rgba(235, 230, 230, 0.685); 
+    width: 80%;
+    height: 90%;
+    transform: translate(25%,11%);
+} 
+
+.menu {
+    transform: scale(0.4) translate(35px);
+}
+
+.search {
+    transform: translate(500px, 40px);
+    border-radius: 10px;
+    border: 0;
+}
+
+.messages {
+    transform: scale(0.4) translate(35px, 350px);
+}
+
+.user {
+    transform: scale(0.2) translate(8800px, -400px);
+}
+
+.house {
+    transform: scale(0.4) translate(35px, 300px);
+}
+ 
+.Hi {
+    position: absolute;
+    right: 100px;
+    color: aliceblue;
+}
+
+.Your {
+    position: absolute;
+    top: 15px;
+    left: 80px;
+    color: aliceblue;
+}
+
+.Dashboard {
+    position: absolute;
+    left: 75px;
+    top: 210px;
+    color: aliceblue
+}
+
+.M {
+    position: relative;
+    left: 75px;
+    top: 65px;
+    color: aliceblue
+} 
+
+.number {
+    position: absolute;
+    width: 8px;
+    left: 170px;
+    top: 325px;
+    background-color: red;
+    color: white;
+    border:0;
+}
+
+.over {
+    position: relative;
+    left: 70px;
+    color: black;
+}
+
+.text1 {
+    width: 900px;
+    height: 400px;
+    position: absolute;
+    left: 20px;
+    border-radius: 25px;
+    border: 0;
+}
+
+.text2 {
+    width: 550px;
+    height: 250px;
+    position: absolute;
+    left: 940px;
+    border-radius: 25px;
+    border: 0;
+}
+
+ .text3 {
+    width: 900px;
+    height: 310px;
+    position: absolute;
+    top: 470px;
+    left: 20px;
+    border-radius: 25px;
+    border: 0;
+}
+
+.text4 {
+    width: 550px;
+    height: 230px;
+    position: absolute;
+    left: 940px;
+    top: 320px;
+    border-radius: 25px;
+    border: 0;
+} 
+
+.text5 {
+    width: 550px;
+    height: 210px;
+    position: absolute;
+    left: 940px;
+    top: 570px;
+    border-radius: 25px;
+    border: 0;
+} 
+
+p {
+    font-size: 18px;
+    font-weight: bold;
+}
