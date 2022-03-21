@@ -64,13 +64,11 @@ body {
     justify-content: space-between;
     flex-direction: column;
     border-bottom-right-radius: 30px;
-    
 }
 
 .sidebar-big-empty-1 {
     display: flex;
     height: 100px;
-    width: 100%;
 }
 
 .sidebar-dashboard {
@@ -78,26 +76,19 @@ body {
     flex-direction: row;
     align-items: center;
     height: 100px; 
-    width: 200px;
-}
-
-.sidebar-messages {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    width: 200px;
+    width: 110px;
 }
 
 .sidebar-big-empty-3 {
     display: flex;
-    height: 650px;
-    width: 100%;
+    height: 600px;
 }
 
 .sidebar-messages {
     display: flex;
     flex-direction: row;
     align-items: center;
+    width: 110px;
     gap: 10px;
 }
 
@@ -160,6 +151,7 @@ span {
     align-items: center;
     gap: 20px;
 }
+
 .container-over {
     display: flex;
     flex-direction: row;
@@ -187,63 +179,184 @@ span {
 .container-big {
     display: flex;
     flex-direction: row;
-    height: 90%;
+    height: 760px;
 }
 
 .container-big-1 {
     display: flex;
     flex-direction: column;
-    width: 50%;
+    flex: 1;
     justify-content: center;
     align-items: center;
-    gap: 30px;
 }
 
 .container1 {
     background-color: aliceblue;
-    height: 45%;
-    width: 94%;
+    height: 350px;
+    width: 760px;
     display: flex;
     border-radius: 20px;
+    margin: 10px;
 }
 
 .container2 {
     background-color: aliceblue;
-    height: 45%;
-    width: 94%;
+    height: 350px;
+    width: 760px; 
     display: flex;
     border-radius: 20px;
+    margin: 10px;
 }
 
 .container-big-2 {
     display: flex;
     flex-direction: column;
-    width: 50%;
     justify-content: center;
-    align-items: center;
-    gap: 30px;
+    flex: 1;
 }
 
 .container3 {
     background-color: aliceblue;
     height: 200px;
-    width: 90%;
+    width: 780px;
     display: flex;
     border-radius: 20px;
+    margin: 10px;
 }
 
 .container4 {
     display: flex;
     background-color: aliceblue;
-    height: 50%;
-    width: 90%;
+    height: 370px;
+    width: 780px;
     border-radius: 20px;
+    margin: 10px;
 }
 
 .container5 {
     display: flex;
     background-color: aliceblue;
     height: 100px;
-    width: 90%;
+    width: 780px;
     border-radius: 20px;
+    margin: 10px;
 }
+
+@keyframes show-elements {
+    0%{
+       width: 100px;
+    }
+    100% {
+        width: 320px;
+    }
+}
+
+@keyframes appear {
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+        display: none;
+        width: 0;
+    }
+}
+
+.sidebar:hover {
+    animation: show-elements 0.5s reverse  forwards ;
+}
+
+ .sidebar:hover > .sidebar-big > .sidebar-dashboard {
+    animation: appear 0.5s forwards ;
+}
+
+.sidebar:hover >  .sidebar-big > .sidebar-messages {
+    animation: appear 0.5s forwards;
+}
+
+.sidebar:hover > .sidebar-small > .sidebar-small-container > .your {
+    animation: appear 0.5s forwards;
+ }
+
+ @media only screen and (max-width:760px) {
+    .main {
+        flex-direction: column; 
+    }
+
+    .sidebar {
+        flex-direction: row; height: 60px; width: 100vw;
+    }
+
+    .content {
+        width: 100vw;
+    }
+
+    .your { 
+        display: none;
+    }
+
+    .sidebar-small {
+        flex-direction: row; border-top-left-radius: 0px; width: 80px;
+    }
+
+    .sidebar-big {
+        flex-direction: row; border-bottom-left-radius: 0px; justify-content: flex-start; 
+    }
+
+    .sidebar-dashboard {
+        transform: scale(0.7);
+    }
+
+    .sidebar-small-container {
+        transform: scale(0.7);
+    }
+
+    .sidebar-messages {
+        transform: scale(0.7);
+    }
+
+    .search-div {
+        transform: scale(0.8);
+    }
+
+    .hi-jane {
+        transform: scale(0.7);
+    }
+
+    .content-small {
+        border-top-right-radius: 0px;
+    }
+
+    .content-big {
+        border-bottom-right-radius: 0px;
+    }
+
+    .container-big {
+        flex-direction: column;
+    }
+
+    .container-big-2 { 
+        align-items: center;
+    }
+
+    .container1 { 
+        width: 300px;height: 150px;
+    }
+
+    .container2 { 
+        width: 300px;height: 150px;
+    }
+
+    .container3 { 
+        width: 300px;height: 100px;
+    }
+
+    .container4 { 
+        width: 300px;height: 100px;
+    }
+
+    .container5 { 
+        width: 300px;height: 100px;
+    }
+
+ }
