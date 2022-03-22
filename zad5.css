@@ -260,6 +260,7 @@ span {
 
     .page {
         flex-direction: column; 
+        width: 75vw;
     }
 
     .page__menu {
