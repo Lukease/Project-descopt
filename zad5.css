@@ -3,25 +3,25 @@ body {
     box-sizing: border-box;
 }
 
-.main {
+.page {
     display: flex;
     width: 100vw;
     height: 100vh;
 }
 
-.sidebar {
+.page__menu {
     display: flex;
     width: 320px;
     flex-direction: column;
 }
 
-.content {
+.page__content {
     display: flex;
     flex: 1;
     flex-direction: column;
 }
 
-.sidebar-small {
+.header {
     display: flex;
     background-color: rgba(0, 3, 155, 0.849);
     width: 100%;
@@ -31,13 +31,8 @@ body {
     border-top-left-radius: 30px;
 }
 
-.sidebar-small-container {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
 
-.sidebar-big {
+.menu__navigation {
     display: flex;
     background-color: rgba(18, 20, 139, 0.849);
     flex: 1;
@@ -47,7 +42,7 @@ body {
     border-bottom-left-radius: 30px;
 }
 
-.content-small {
+.content__header {
     display: flex;
     background-color: rgb(105, 125, 240);
     width: 100%;
@@ -57,7 +52,7 @@ body {
     border-top-right-radius: 30px;
 }
 
-.content-big {
+.content__container {
     display: flex;
     background-color: rgb(230, 230, 230);
     flex: 1;
@@ -66,12 +61,12 @@ body {
     border-bottom-right-radius: 30px;
 }
 
-.sidebar-big-empty-1 {
+.navigation__void--top {
     display: flex;
     height: 100px;
 }
 
-.sidebar-dashboard {
+.navigation__dashboard {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -79,12 +74,12 @@ body {
     width: 110px;
 }
 
-.sidebar-big-empty-3 {
+.navigation__void--bottom {
     display: flex;
     height: 600px;
 }
 
-.sidebar-messages {
+.navigation__messages {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -92,26 +87,26 @@ body {
     gap: 10px;
 }
 
-.menu {
+.header__image {
     width: 40px;
     height: 40px;
 }
 
-.house {
+.dashboard__image {
     width: 60px;
     height: 40px;
 }
 
-.Dashboard {
+.dashboard__title {
     height: 20px;
 }
 
-.messages {
+.messages__image {
     width: 60px;
     height: 40px;
 }
 
-.m {
+.messages__title {
     height: 20px;
 } 
 
@@ -121,7 +116,7 @@ span {
     color: aliceblue;
 }
 
-.number {
+.messages__number {
     display: flex;
     width: 10px;
     height: 20px;
@@ -130,13 +125,13 @@ span {
     color: aliceblue;
 }
 
-.search-div {
+.header__search {
     display: flex;
     width: 300px;
     justify-content: center;
 }
 
-.search {
+.search__input {
     width: 200px;
     height: 20px;
     border: 0;
@@ -144,7 +139,7 @@ span {
     
 }
 
-.hi-jane {
+.header__user {
     display: flex;
     width: 250px;
     justify-content: center;
@@ -152,37 +147,37 @@ span {
     gap: 20px;
 }
 
-.container-over {
+.container__head {
     display: flex;
     flex-direction: row;
     height: 80px;
 }
 
-.content-over-empty {
+.head__void {
     width: 40px;
 }
 
-.content-over {
+.container__head {
     display: flex;
     align-items: center;
 }
 
-.over {
+.title__span {
     color: black;
     font-size: 40px;
 }
 
-.user {
+.user__icon {
     width: 30px;
 }
 
-.container-big {
+.container-column {
     display: flex;
     flex-direction: row;
     height: 760px;
 }
 
-.container-big-1 {
+.container-column__column-left {
     display: flex;
     flex-direction: column;
     flex: 1;
@@ -190,7 +185,7 @@ span {
     align-items: center;
 }
 
-.container1 {
+.column-left__top {
     background-color: aliceblue;
     height: 350px;
     width: 760px;
@@ -199,7 +194,7 @@ span {
     margin: 10px;
 }
 
-.container2 {
+.column-left__bottom {
     background-color: aliceblue;
     height: 350px;
     width: 760px; 
@@ -208,14 +203,14 @@ span {
     margin: 10px;
 }
 
-.container-big-2 {
+.container-column__column-right {
     display: flex;
     flex-direction: column;
     justify-content: center;
     flex: 1;
 }
 
-.container3 {
+.column-right--top {
     background-color: aliceblue;
     height: 200px;
     width: 780px;
@@ -224,7 +219,7 @@ span {
     margin: 10px;
 }
 
-.container4 {
+.column-right--middle {
     display: flex;
     background-color: aliceblue;
     height: 370px;
@@ -233,7 +228,7 @@ span {
     margin: 10px;
 }
 
-.container5 {
+.column-right--bottom {
     display: flex;
     background-color: aliceblue;
     height: 100px;
@@ -279,84 +274,85 @@ span {
  }
 
  @media only screen and (max-width:760px) {
-    .main {
+
+    .page {
         flex-direction: column; 
     }
 
-    .sidebar {
+    .page__menu {
         flex-direction: row; height: 60px; width: 100vw;
     }
 
-    .content {
+    .page__content {
         width: 100vw;
     }
 
-    .your { 
+    .header__title { 
         display: none;
     }
 
-    .sidebar-small {
+    .header {
         flex-direction: row; border-top-left-radius: 0px; width: 80px;
     }
 
-    .sidebar-big {
+    .menu__navigation {
         flex-direction: row; border-bottom-left-radius: 0px; justify-content: flex-start; 
     }
 
-    .sidebar-dashboard {
+    .navigation__dashboard {
         transform: scale(0.7);
     }
 
-    .sidebar-small-container {
+    .navigation__messages {
         transform: scale(0.7);
     }
 
-    .sidebar-messages {
-        transform: scale(0.7);
-    }
-
-    .search-div {
+    .search__inputsearch-div {
         transform: scale(0.8);
     }
 
-    .hi-jane {
+    .header__user {
         transform: scale(0.7);
     }
 
-    .content-small {
+    .content__header {
         border-top-right-radius: 0px;
     }
 
-    .content-big {
+    .content__container {
         border-bottom-right-radius: 0px;
     }
 
-    .container-big {
+    .container-column {
         flex-direction: column;
     }
 
-    .container-big-2 { 
+    .container-column__column-left { 
         align-items: center;
     }
 
-    .container1 { 
+    .container-column__column-right { 
+        align-items: center;
+    }
+
+    .column-left__top { 
         width: 300px;height: 150px;
     }
 
-    .container2 { 
+    .column-left__bottom { 
         width: 300px;height: 150px;
     }
 
-    .container3 { 
+    .column-right--top { 
         width: 300px;height: 100px;
     }
 
-    .container4 { 
+    .column-right--middle { 
         width: 300px;height: 100px;
     }
 
-    .container5 { 
+    .column-right--bottom { 
         width: 300px;height: 100px;
     }
-
+    
  }
